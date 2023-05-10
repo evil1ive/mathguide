@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/mathguide/static/css/main.902e149f.css",
+    "main.js": "/mathguide/static/js/main.a1ee3045.js",
+    "static/media/logo.svg": "/mathguide/static/media/logo.6e3285320dff5561e42e770fea2c4631.svg",
+    "index.html": "/mathguide/index.html",
+    "main.902e149f.css.map": "/mathguide/static/css/main.902e149f.css.map",
+    "main.a1ee3045.js.map": "/mathguide/static/js/main.a1ee3045.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.902e149f.css",
+    "static/js/main.a1ee3045.js"
+  ]
+}
