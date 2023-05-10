@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Header } from './components/header/header';
+import { Home } from './sheets/homeS/home';
+import { Base } from './sheets/baseS/base';
+import { Upper } from './sheets/upperS/upper';
+import { Statistic } from './sheets/statisticS/statistic';
+import { Logic } from './sheets/logicS/logic';
+import { Footer } from './components/footer/footer';
 import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path='/base' element={<Base />} />
+        <Route path="/upper" element={<Upper />} />
+        <Route path="/statistics" element={<Statistic />} />
+        <Route path="/logics" element={<Logic />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

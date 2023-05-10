@@ -1,0 +1,100 @@
+@import '../../styles.scss';
+
+.upper-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 90px 0 0 0;
+    background-color: $backgroundColor;
+    color: $textColor;
+    
+    & > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 1366px;
+        
+        
+        & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 20px 0;
+            border-top: 1px solid $selectTextColor;
+
+            .content-wrapper__example {
+                font-weight: 700;
+            }
+            
+            & > h3 {
+                margin: 25px 0 ;
+                font-size: 36px;
+                font-weight: 700;
+                text-align: center;
+            }
+
+            & > h4 {
+                margin: 20px 0;
+                font-size: 28px;
+                font-weight: 400;
+                text-align: center;
+            }
+
+            & > p {
+                font-size: 22px;
+                width: 750px;
+                margin: 12px 0;
+                text-align: center;
+            }
+        }
+
+        @media (max-width:1400px) {
+            width: 768px;
+        }
+
+        @media (max-width:790px) {
+            width: 300px;
+
+            & > div{ 
+                & > h3 {
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+    
+                & > h4 {
+                    font-size: 22px;
+                    font-weight: 400;
+                }
+    
+                & > p {
+                    font-size: 18px;
+                    width: 280px;
+                }
+            }
+        }
+    }
+
+    span {
+        color: $selectTextColor;
+    }
+
+    .start-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 90px);
+        font-size: 40px;
+        font-weight: 700;
+
+        @media (max-width:790px) {
+            font-size: 32px;
+        }
+    }
+
+        
+    
+    
+}

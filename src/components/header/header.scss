@@ -1,0 +1,98 @@
+@import '../../styles.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 90px;
+    background-color: $backgroundColor;
+    color: $textColor;
+    -webkit-box-shadow: 0px 7px 10px -5px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0px 7px 10px -5px rgba(0, 0, 0, .1);
+    box-shadow: 0px 7px 10px -5px rgba(0, 0, 0, .1);
+    
+    &__logo {
+        margin: 0 0 0 35px;
+    }
+
+    &__links {
+        color: $textColor;
+        font-size: 24px;
+        margin: 0 15px;
+
+        &.active {
+            color: $selectTextColor;
+        }
+    }
+    
+
+    &__nonburger-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__burger-links {
+        display: none;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__burger-button {
+        display: none;
+    }
+
+    @media (max-width:768px) {
+        height: 90px;
+
+        &__nonburger-links {
+            display: none;
+        }
+
+        &__burger-links {
+            display: flex;
+            
+            position: absolute;
+            top: -100vh;
+            z-index: -1;
+            transition: 1.2s ease-in-out;
+            height: 100vh;
+            width: 100%;
+            background-color: $backgroundColor;
+            &.active {
+                top: 0;
+            }
+        }
+
+        &__links {
+            font-size: 20px;
+            margin: 15px 0px;
+        }
+
+        &__burger-icon {
+            margin: 0 20px 0 0;
+        }
+
+        &__burger-button {
+            display: block;
+            rotate: 90deg;
+            height: 50px;
+            width: 50px;
+            fill: $textColor;
+            stroke: $textColor;
+            
+            &.active {
+                fill: $selectTextColor;
+                stroke: $selectTextColor;
+            }
+        }
+
+
+    }
+
+}
